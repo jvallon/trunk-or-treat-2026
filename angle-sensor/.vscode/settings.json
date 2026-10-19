@@ -1,0 +1,25 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.analysis.extraPaths": [
+    "c:\\Users\\whisl\\AppData\\Roaming\\Code\\User\\globalStorage\\padgettholdings.circuitpythonsync\\stubs\\circuitpython_stubs-10.3.1\\board_definitions\\adafruit_feather_esp32s3_reverse_tft",
+    "${workspaceFolder}/.venv/Lib/site-packages",
+    "${workspaceFolder}/lib",
+    "c:\\Users\\whisl\\AppData\\Roaming\\Code\\User\\globalStorage\\padgettholdings.circuitpythonsync\\stubs\\circuitpython_stubs-10.3.1"
+  ],
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingModuleSource": "none"
+  },
+  "filewatcher.commands": [
+    {
+      "match": "\\.*",
+      "isAsync": false,
+      "cmd": "echo '${file} folder content Changed'",
+      "event": "onFolderChange"
+    }
+  ],
+  "circuitpythonsync.cpbaseversion": "10",
+  "circuitpythonsync.cpfullversion": "10.3.1",
+  "circuitpythonsync.curlibtag": "20261016",
+  "circuitpythonsync.drivepath": "F:",
+  "circuitpythonsync.cpboardname": "adafruit_feather_esp32s3_reverse_tft"
+}

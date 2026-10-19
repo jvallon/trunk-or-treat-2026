@@ -1,0 +1,2 @@
+[tool.circup.bundle-versions]
+"adafruit/Adafruit_CircuitPython_Bundle" = "20261016"
