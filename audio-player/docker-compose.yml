@@ -1,0 +1,28 @@
+version: '3.8'
+
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1450
+
+services:
+  mqtt:
+    image: eclipse-mosquitto:latest
+    container_name: mqtt
+    ports:
+      - "0.0.0.0:11883:1883"
+      - "0.0.0.0:9001:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config:ro
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    user: "0:0"
+    restart: unless-stopped
+    networks:
+      - default
+
+volumes:
+  mosquitto-config:
+  mosquitto-data:
+  mosquitto-log:

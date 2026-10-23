@@ -1,0 +1,2 @@
+# Ignore all audio files in this directory to avoid committing copyrighted content
+*.wav

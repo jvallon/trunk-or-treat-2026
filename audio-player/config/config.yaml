@@ -1,0 +1,47 @@
+# MQTT Audio Player Configuration
+
+mqtt:
+  broker: localhost
+  port: 11883
+  client_id: audio-player
+  keepalive: 60
+  reconnect_delay: 5  # seconds
+
+topics:
+  - topic: sensor/angle
+    handler: handle_angle
+    description: "Handle angle sensor data"
+  - topic: sensor/speed
+    handler: handle_speed
+    description: "Handle speed sensor data"
+
+audio:
+  data_dir: ../data  # relative to this file
+  default_volume: 1.0  # 0-1.0
+  mapping:
+    sensor/angle:
+      "0-14": phm.rocky.01.why_teacher_in_space.wav
+      "15-29": phm.rocky.02.i_like.wav
+      "30-44": phm.rocky.03.no_understand.wav
+      "45-59": phm.rocky.04.watch_grace_sleep.wav
+      "60-74": phm.rocky.05.hi_grace.wav
+      "75-89": phm.rocky.06.so_rocky_no_die.wav
+      "90-104": phm.rocky.36.earth_making_machine.wav
+      "105-119": phm.rocky.25.disgust_when_eat.wav
+      "120-134": phm.rocky.09.keep_going_this_way.wav
+      "135-149": phm.rocky.10.this_room_boring.wav
+      "150-164": phm.rocky.11.save_earth_save_erid.wav
+      "165-179": phm.rocky.12.good_plan.wav
+      "180-194": phm.rocky.13.what_this_down_here.wav
+      "195-209": phm.rocky.14.amaze_amaze_amaze_1.wav
+      "210-224": phm.rocky.15.rocky_wanna_see.wav
+      "225-239": phm.rocky.16.why_room_so_messy.wav
+      "240-254": phm.rocky.17.this_room_for_garbage.wav
+      "255-269": phm.rocky.27.too_fast_do_puppet_show.wav
+      "270-284": phm.rocky.29.rocky_hate_mark.wav
+      "285-299": phm.rocky.20.i_see_grace.wav
+      "300-314": phm.rocky.21.apology_apology_apology.wav
+      "315-329": phm.rocky.22.rocky_new_to_ball.wav
+      "330-344": phm.rocky.23.boundary_mission_separately.wav
+      "345-359": phm.rocky.24.where_my_bedroom.wav
+
